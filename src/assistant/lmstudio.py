@@ -79,7 +79,7 @@ class ChatLMStudio(ChatOpenAI):
 
                 # Try to find JSON in the response
                 json_start = raw_text.find('{')
-                json_end = raw_text.rfind('}') + 1
+                json_end = raw_text.rind('}') + 1
 
                 if json_start >= 0 and json_end > json_start:
                     # Extract just the JSON part
