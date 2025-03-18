@@ -110,7 +110,7 @@ def summarize_sources(state: SummaryState, config: RunnableConfig):
         )
 
     # Run the LLM
-    configurable = Configuration.from_runnable_config(config)
+    configurable22 = Configuration.from_runnable_config(config)
     llm = ChatOllama(base_url=configurable.ollama_base_url, model=configurable.local_llm, temperature=0)
     result = llm.invoke(
         [SystemMessage(content=summarizer_instructions),
